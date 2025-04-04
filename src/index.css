@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+
+body {
+    height: 100%;
+    min-height: 100vh;
+}
+
+#root {
+    @apply flex flex-col min-h-screen;
+}
+
+.navigation ul {
+    @apply flex flex-col md:flex-row m-0 p-0 justify-center items-center gap-4;
+}
+
+.navigation ul li a{
+    @apply inline-block text-sm py-2 px-4 cursor-pointer;
+}
+
+
+footer {
+    @apply bg-black text-white text-center p-4;
+}
+
+.pokemonList{
+    @apply flex justify-between gap-4 flex-wrap p-4
+}
+
+.pokemonListItem{
+    @apply flex flex-row gap-2 min-w-60 border ;
+}
+.pokemonListItem div{
+    @apply flex flex-col p-2;
+}
+
+.pokemonListItem img{
+    @apply object-cover;
+}
+
+
+@import "./styles/paging.css";

@@ -1,0 +1,11 @@
+.pagingHolder {
+    @apply flex justify-between items-center mt-3 py-2 px-4;
+}
+
+.pagingInfo span input {
+    @apply text-center ml-2;
+}
+
+.pagingNavigator button {
+    @apply bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-2;
+}
