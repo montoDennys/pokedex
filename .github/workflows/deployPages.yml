@@ -1,4 +1,4 @@
-name: Despliegue a Github Pages del SPA con Vitse
+name: Despliegue a Github Pages del SPA con Vite
 
 on:
   push:
