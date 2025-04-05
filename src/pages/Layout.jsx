@@ -1,20 +1,24 @@
 import { Outlet, useLocation } from "react-router";
 import { Page } from "../components/Page";
 
-
 const titles = {
     "/": "Dashboard",
     "/my-collection": "Mi Colección",
-    "/about": "Acerca de"
-}
+    "/about": "Acerca de",
+};
 
 export const Layout = () => {
     const { pathname: currentPath } = useLocation();
-    console.log("Current Path:", currentPath);
+
+    const isDetailsPage = currentPath.startsWith("/details/");
+
+    const pageTitle = isDetailsPage
+        ? `Detalles del Pokémon`
+        : titles[currentPath] || "Not Found";
+
     return (
-        <Page title={titles[currentPath] || 'Not Found'}>
+        <Page title={pageTitle}>
             <Outlet />
         </Page>
-    )
-
-}
+    );
+};

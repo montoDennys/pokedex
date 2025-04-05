@@ -3,7 +3,6 @@ import { Loading } from "../components/Loading";
 import { usePokemonDetail } from '../services/pockemonapi';
 import { PokemonAddCollection } from "../components/Pokemon/PokemonAddCollection";
 
-// Moved outside component to avoid recreation on each render
 const TYPE_COLORS = {
     normal: 'bg-gray-400 text-gray-800',
     fire: 'bg-red-500 text-white',
@@ -60,9 +59,7 @@ export const Details = () => {
     return (
         <div className={`min-h-screen bg-gradient-to-b from-${colorClass.split('-')[1]}-50 to-white py-8`}>
             <div className="container mx-auto px-4">
-                {/* Header Section */}
                 <div className="flex flex-col md:flex-row gap-8 mb-8">
-                    {/* Left Column - Image */}
                     <div className="w-full md:w-1/3 flex flex-col items-center gap-4">
                         <div className="bg-white rounded-lg shadow-md p-4 w-full flex flex-col items-center">
                             <img 
@@ -87,7 +84,6 @@ export const Details = () => {
                         />
                     </div>
 
-                    {/* Right Column - Details */}
                     <div className="w-full md:w-2/3 space-y-6">
                         <DetailSection>
                             <h1 className="text-3xl font-bold capitalize mb-2">
@@ -132,7 +128,6 @@ export const Details = () => {
                     </div>
                 </div>
 
-                {/* Bottom Sections */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <DetailSection title="Base Stats">
                         <ul className="space-y-3">

@@ -1,17 +1,17 @@
 import { NavBar } from "./Navbar"
 
-export const Page = ( {title, children} )=>{
+export const Page = ( {title, children} ) => {
     return (
         <>
-            <header className="bg-black text-white py-2 px-4">
-                <div className="text-lg text-center">{title}</div>
+            <header className="bg-blue-500 text-white py-2 px-4">
+                <div className="text-lg text-center font-semibold">{title}</div>
                 <NavBar />
             </header>
-            <main className="grow">
-                 {children}
+            <main className="grow bg-gray-100">
+                {children}
             </main>
-            <footer className="p-4">
-                202501
+            <footer className="bg-blue-500 text-white text-center py-4">
+                © 2025 Pokedex
             </footer>
         </>
     )
